@@ -6,20 +6,25 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Here, we are creating the array list with the name "catalog".
+ */
+
 public class Catalog {
     private ArrayList<Product> catalog = new ArrayList<>();
 
     /**
-     *
-     * @param product
+     *Here, we are creating the add function with the product parameter.
      */
 
     public void addProduct(Product product) {
+
         catalog.add(product);
     }
 
     /**
-     *
+     *Here, we are creating the display function from the catalog array list.
+     * Before its checks, is it empty? And in case it is not, it will show the message "Name:,""Price:", "ID:."
      */
 
     public void displayCatalog() {
@@ -34,10 +39,7 @@ public class Catalog {
     }
 
     /**
-     *
-     * @param id
-     * @param newName
-     * @param newPrice
+     *Here, we are creating the modify function with the id, newName and newPrice parameter.
      */
 
     public void modifyProduct(String id, String newName, String newPrice ) {
@@ -48,6 +50,7 @@ public class Catalog {
 
                 System.out.println("Product modified successfully.");
                 dumpProducts();
+                loadProducts();
                 return;
             }
         }
@@ -55,8 +58,7 @@ public class Catalog {
     }
 
     /**
-     *
-     * @param id
+     *Here, we are creating the delete function with the id parameter.
      */
 
     public void deleteProduct(String id) {
@@ -66,13 +68,15 @@ public class Catalog {
         if (removed) {
             System.out.println("Product removed successfully.");
             dumpProducts();
+            loadProducts();
         } else {
             System.out.println("Product not found: " + id );
         }
     }
 
     /**
-     *
+     *Here, we load products from a CSV file ("ProductFile.csv") into the catalog.
+     *Each line separated by commas (name, price, and ID).
      */
 
     public void loadProducts() {
@@ -94,7 +98,7 @@ public class Catalog {
     }
 
     /**
-     *
+     *Saves the current catalog to a CSV file ("ProductFile.csv").
      */
 
     public void dumpProducts() {
