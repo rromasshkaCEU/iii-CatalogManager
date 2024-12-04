@@ -2,6 +2,10 @@ package presentation;
 import domain.*;
 import java.util.Scanner;
 
+/**
+ *Here, The Menu class provides a user interface for interacting with the catalog system.
+ * It is the main class where all function meet.
+ */
 
 public class Menu {
     public static void main(String[] args) {
@@ -31,6 +35,7 @@ public class Menu {
                     catalog.addProduct(new Product(name, price, colour));
                     System.out.println("Product added.");
                     catalog.dumpProducts();
+                    catalog.loadProducts();
 
                     break;
 
