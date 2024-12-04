@@ -7,7 +7,7 @@ public class Product {
     private String id;
 
     /**
-     *
+     *It is a constructor, where we identified the name, price, and id parameters.
      * @param name
      * @param price
      * @param id
@@ -20,7 +20,7 @@ public class Product {
     }
 
     /**
-     *
+     *It is setter for name parameter.
      * @param name
      */
 
@@ -30,7 +30,7 @@ public class Product {
     }
 
     /**
-     *
+     *It is setter for price parameter
      * @param price
      */
 
@@ -39,7 +39,7 @@ public class Product {
     }
 
     /**
-     *
+     *It is setter for id.
      * @param id
      */
 
@@ -49,7 +49,7 @@ public class Product {
     }
 
     /**
-     *
+     *It is getter for name.
      * @return
      */
 
@@ -59,7 +59,7 @@ public class Product {
     }
 
     /**
-     *
+     *It is getter for price.
      * @return
      */
 
@@ -69,7 +69,7 @@ public class Product {
     }
 
     /**
-     *
+     *It is getter for id.
      * @return
      */
 
@@ -79,7 +79,7 @@ public class Product {
     }
 
     /**
-     *
+     *Here, It compares this product to another object for equality.
      * @param obj
      * @return
      */
